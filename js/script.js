@@ -3,7 +3,30 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
+function time(){
+  var a = 0
+  setInterval(function(){
+    a += Math.floor(Math.random()*20)
+    if(a<100){
+      document.querySelector("#loader h1").innerHTML = a +"%"
+    }
+    else{
+      a = 100
+      document.querySelector("#loader h1").innerHTML = a +"%"
+    }
+  },90)
+}
+
 var tl = gsap.timeline()
+tl.to("#loader ",{
+  top:"-100vh",
+  delay:1,
+  duration:1
+})
+tl.to("#loader h1",{
+  duration:1,
+  onStart:time()
+})
 tl.from(".headersec",{
     y:-100,
     duration:1,
@@ -31,8 +54,8 @@ function circleScalling() {
     window.addEventListener("mousemove", function (dets) {
       clearTimeout(timeout);
   
-      xscale = gsap.utils.clamp(0.5, 1, dets.clientX - xprev);
-      yscale = gsap.utils.clamp(0.5, 1, dets.clientY - yprev);
+      xscale = gsap.utils.clamp(0.6, 1, dets.clientX - xprev);
+      yscale = gsap.utils.clamp(0.6, 1, dets.clientY - yprev);
   
       xprev = dets.clientX;
       yprev = dets.clientY;
