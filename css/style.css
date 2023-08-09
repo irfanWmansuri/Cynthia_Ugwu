@@ -5,6 +5,19 @@
 a{text-decoration: none;position: relative;}
 li{list-style: none;}
 #cursor{width: 12px;height: 12px;background-color: #fff;z-index: 999;border-radius: 50%;transition:.3s ease-out;position: absolute;}
+#loader{width: 100%;height: 100vh;background-color: #999999;display: flex;align-items: center;justify-content: center;position: fixed;z-index: 9999;}
+#loader h1,.loadingsec h2{color: #000000;}
+.loadingsec{width: 200px;height: 50px;color: #000000;position: relative;display: flex;align-items: center;justify-content: center;}
+.loadingsec::before,
+.loadingsec:after{content: '';width: 15px;height: 15px;background: #000000;position: absolute;animation:loading .8s infinite alternate ease-in-out;}
+.loadingsec::before{top: 0;}
+.loadingsec::after{bottom: 0;}
+
+@keyframes loading{
+    0%{left: 0;height: 30px;width: 15px;}
+    50%{height: 8px;width: 50px;}
+    100%{left: 180px;height: 30px;width: 15px;}
+}
 
 .headersec{width: 100%;padding: 30px 0;}
 .headersec .container{display: flex;align-items: center;justify-content: space-between;}
