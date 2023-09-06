@@ -2,9 +2,9 @@
 *{margin:0;padding:0;box-sizing: border-box;font-family: 'Open Sans', sans-serif;color: #fff;}
 #wrapper{background-color: #000000;position: relative;}
 .container{width: 1290px;margin: 0 auto;}
-a{text-decoration: none;position: relative;}
+a{text-decoration: none;position: relative;display: inline-block;}
 li{list-style: none;}
-#cursor{width: 12px;height: 12px;background-color: #fff;z-index: 999;border-radius: 50%;transition:.3s ease-out;position: absolute;}
+#cursor{width: 20px;height: 20px;background-color: #fff;z-index: 999;border-radius: 50%;transition:.3s ease-out;position: absolute;mix-blend-mode: difference;}
 #loader{width: 100%;height: 100vh;background-color: #999999;display: flex;align-items: center;justify-content: center;position: fixed;z-index: 9999;}
 #loader h1,.loadingsec h2{color: #000000;}
 .loadingsec{width: 200px;height: 50px;color: #000000;position: relative;display: flex;align-items: center;justify-content: center;}
@@ -22,8 +22,8 @@ li{list-style: none;}
 .headersec{width: 100%;padding: 30px 0;}
 .headersec .container{display: flex;align-items: center;justify-content: space-between;}
 .headersec a{font-size: 17px;font-weight: 600;}
-.headersec .menusec a::after{content: '';width: 0;height: 1px;background-color: #fff;display: block;}
-.headersec .menusec a:hover::after{width: 100%;transition: .3s linear;}
+ a::after{content: '';width: 0;height: 1px;background-color: #fff;display: block;transition: .3s linear;}
+ a:hover::after{width: 100%;transition: .3s linear;}
 
 .bannersec{width: 100%;height: 100%;padding: 80px 0;}
 .bannersec .bannercontent{width:59vw;height: auto;}
@@ -41,15 +41,14 @@ li{list-style: none;}
 .toparrow1{text-align: left;}
 .toparrow2{text-align: center;}
 .toparrow1 a,.toparrow2 a{font-size: 1.2vw;text-transform: uppercase;font-weight: 600;position: relative;}
-.toparrow1 a i,.toparrow2 a i{font-size: 1.2vw;}
-/* .toparrow1 a,.toparrow2 a::after{content: '';width: 0;height: 1px;background-color: #fff;display: block;}
-.toparrow1 a:hover::after,.toparrow2 a:hover::after{width: 100%;transition: .3s linear;} */
+.toparrow1 a i,.toparrow2 a i{font-size: 1.2vw;transform: rotate(90deg);}
+/* .toparrow1 a:hover i{transform: rotate(90deg);} */
 
 .aboutussec{width: 100%;height: auto;margin-top: 50px;}
 .aboutussec .about{border-top: 1px solid #fff;padding: 40px 0;display: flex;align-items: center;justify-content: space-between;position: relative;}
 .aboutussec .borderbtm{border-bottom: 1px solid #fff;}
 .about h4{font-size: 7vw;text-transform: uppercase;opacity: .6;}
-.about img{position: absolute;z-index: 99;opacity: 0;}
+.about img{position: absolute;z-index: 99;opacity: 0;transform: translate(-50%,-50%);}
 
 .aboutmesec{width: 100%;padding: 200px 0;}
 .aboutmesec .container{display: flex;justify-content: flex-end;gap: 70px;padding-right: 10vw;}
@@ -60,7 +59,7 @@ li{list-style: none;}
 
 .subscribesec{width: 100%;padding-bottom: 50px;}
 .subscribesec h4{font-size: 1vw;opacity: .6;font-weight: 100;}
-.subscribesec a{font-size: 1.2vw;font-weight: 600;}
+.subscribesec a{font-size: 1.2vw;font-weight: 600;display: inline-block;}
 
 .footersec{padding-top: 100px;padding-bottom: 20px;}
 .footersec .container{display: flex;align-items: center;justify-content: space-between;}
